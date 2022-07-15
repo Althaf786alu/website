@@ -1,0 +1,53 @@
+  
+    body{  
+        font-family: Calibri; 
+    }  
+    input[type="text"] {  
+        width: 250px; 
+      
+    }  
+    input[type="submit"], input[type="reset"] {  
+        width: 77px;  
+        height: 27px;  
+        position: relative;left: 180px;  
+    }  
+    form{  
+        text-align: center;  
+        font-family: Calibri;  
+        font-size: 20px;  
+        border: 3px solid black;  
+        width: 600px;  
+        margin: 20px auto;  
+    }  
+    td {  
+        padding: 10px;  
+    }  
+    td:first-child {  
+        text-align: right;  
+        font-weight: bold; 
+        color:black 
+    }  
+    td:last-child {  
+        text-align: left;  
+    }
+    .k
+    {
+        color:aqua;
+        visibility: hidden;
+    
+    }
+    form i{
+        margin-left: -30px;
+        cursor: pointer;
+    }
+    #h
+    {
+        color:green;
+        
+    }
+     #terms
+    {
+        width: 10px;
+        text-align: justify;
+
+    }

@@ -1,0 +1,195 @@
+<!DOCTYPE html>    
+<html>    
+<head> 
+    <link rel="stylesheet" href="js.css">   
+    <title>Validations </title>    
+    <style type="text/css">  
+    h1{
+        color:rebeccapurple;
+        font-family: 'Courier New', Courier, monospace;
+    }  
+    h2{
+        color:blue;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+        body{    
+            font-family: Calibri;
+            background-image: url(US-wp1.jpg);    
+        }    
+        input[type="text"] {    
+            width: 250px;
+            color:black ;
+            font-size: 20px;
+            font-family:'Times New Roman', Times, serif;    
+        }    
+        input[type="submit"], input[type="reset"] {    
+            width: 77px;    
+            height: 27px;  
+            color: royalblue;  
+            position: relative;left: 180px;    
+        }    
+        form{    
+            text-align: center;    
+            font-family: Calibri;    
+            font-size: 20px;    
+            border: 5px inset black;    
+            width: 600px;    
+            margin: 20px auto;    
+        }    
+        td {    
+            padding: 10px;    
+        }    
+        td:first-child { 
+           
+            text-align: right;    
+            font-weight: bold;
+               
+        }    
+        td:last-child {    
+            text-align: left;    
+    
+    </style>    
+    <script>    
+        function validate() {    
+            var fname = document.reg_form.fname;    
+            var lname = document.reg_form.lname;    
+            var address = document.reg_form.address;    
+            var gender = document.reg_form.gender;    
+            var email = document.reg_form.email;    
+            var mobile = document.reg_form.mobile; 
+            var hobbies = document.reg_form.hobbies; 
+          
+         
+    
+            if (fname.value.length <= 3) {    
+                alert("Name is required");    
+                fname.focus();    
+                return flase;    
+            }    
+            if (lname.value.length <= 3) {    
+                alert("Last Name is required");    
+                lname.focus();    
+                return true;    
+            }    
+            if (address.value.length <= 0) {    
+                alert("Address is required");    
+                address.focus();    
+                return false;    
+            }    
+            if (gender.value.length <= 0) {    
+                alert("Gender is required");    
+                gender.focus();    
+                return false;    
+            }    
+            if (email.value.length <= 0) {    
+                alert("Email Id is required");    
+                email.focus();    
+                return false;    
+            }    
+            if (mobile.value.length <= 0) {    
+                alert("Mobile number is required");    
+                mobile.focus();    
+                return false;    
+            }  
+            if (hobbies.value.length <= 0) {    
+                alert("select two hobbies");    
+                hobbies.focus();    
+                return false;   
+            }
+            
+            
+        }   
+        function myfunction()
+        {
+            var x=document.getElementById("pd");
+            if(x.type === "password")
+            {
+                x.type="text";
+            }else{
+                x.type="password";
+            }
+        } 
+    </script>    
+</head>    
+<body>    
+    <center><h1><u>Application Form</u>   </h1></center>    
+    <hr>  
+    <form method="" action=""  name="reg_form" onsubmit=" validate()">     
+        <h2><u>Registration Form</u></h2>    
+        <table>    
+            <tr>    
+                <td><label>First Name: </label></td>    
+                <td>    
+                    <input type="text" name="fname" placeholder="First Name">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Last Name: </label></td>    
+                <td>    
+                    <input type="text" name="lname" placeholder="Last Name">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Address: </label></td>    
+                <td>    
+                   <textarea name="message"></textarea>    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Gender: </label></td>    
+                <td>    
+                    <input type="radio" name="gender" value="male">Male    
+                    <input type="radio" name="gender" value="femele">Female    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Email Id: </label></td>    
+                <td>    
+                    <input type="text" name="email" placeholder="example@gmail.com">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Mobile: </label></td>    
+                <td>    
+                    <input type="number" name="mobile" placeholder="+91">    
+                </td>    
+            </tr> 
+            <tr><td>Password</td><td><input type="password" id= "pd">*</tr></td> 
+               <tr><td></td><td><input type="checkbox" id="s" onclick="myfunction()">Show Password</td></tr>
+               <tr><td><label>Hobbies:</label></td>
+                        <td><input type="checkbox" name="Hobbies" id="h" value="Sports">
+                            <label for="h"> Sports</label>
+                            <input type="checkbox" name="Hobbies"  id="h" value="Reading">
+                            <label for="h"> Reading</label>
+                            <input type="checkbox" name="Hobbies"   id="h" value="Poetry">
+                                <label for="h"> Poetry</label>
+                            <input type="checkbox" name="Hobbies"  id="h" value=" Dancing">
+                                <label for="h"> Dancing</label>
+                                <input type="hidden" id='multichk'/>
+                            </td>
+                        </tr>
+                        <tr>
+                <td><label for="Branch">Choose ur Branch:</label>
+<td>
+<select name="Branch" id="Branch">
+  <option value="CSE">CSE</option>
+  <option value="ECE">ECE</option>
+  <option value="ME">ME</option>
+  <option value="CE">CE</option>
+</select></tr></td>
+              <tr> <td><label> File: </label></td><td><input type="file" id="myFile" name="filename"></td> </tr><br>
+                    
+                        <tr><td><label>Date Of Birth :</label></td>
+                            <td><input type="date" id="Birthdate" name="birthdate"></td></tr>
+                            <tr><td><p><input id="terms" type="checkbox" onclick="agree()" name="terms" value="on">I agree</p></td></tr>
+           
+                <tr>   
+                <td>    
+                    <input type="submit" name="submit" value="Submit">    
+                    <input type="reset" name="reset" value="Reset">    
+                </td>    
+            </tr>             
+        </table>    
+    </form>    
+</body>    
+</html>
